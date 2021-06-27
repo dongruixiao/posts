@@ -1,0 +1,4 @@
+baseURL = "https://d3adloop.github.io/posts/"
+languageCode = "en-us"
+title = "D3adloop"
+theme = "one"
