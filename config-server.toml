@@ -2,3 +2,11 @@ baseURL = "http://rm-rf.run/"
 languageCode = "en-us"
 title = "D3adloop"
 theme = "one"
+
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "pygments"
+
+[params]
+    navigation = ["archives.md", "about.md"]
+
