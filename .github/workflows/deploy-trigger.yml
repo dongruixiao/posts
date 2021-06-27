@@ -21,13 +21,27 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
-      - name: Build
+      - name: Build for gh-pages
         run: hugo --minify
 
-      - name: Deploy
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+
+      - name: Build for server
+        run: hugo --minify --config config-server.toml
+
+      - name: Deploy to server via rsync
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "public/"
+          REMOTE_HOST: ${{ secrets.VPS_DEPLOY_HOST }}
+          REMOTE_USER: ${{ secrets.VPS_DEPLOY_USER }}
+          TARGET: ${{ secrets.VPS_DEPLOY_DEST }}
+
 
