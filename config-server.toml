@@ -1,6 +1,6 @@
 baseURL = "http://rm-rf.run/"
 languageCode = "en-us"
-title = "D3adloop"
+title = "Hey"
 theme = "one"
 
 pygmentsCodefences = true

@@ -1,6 +1,6 @@
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
-title = "D3adloop"
+title = "Hey"
 theme = "one"
 
 pygmentsCodefences = true
