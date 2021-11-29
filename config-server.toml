@@ -1,6 +1,6 @@
 baseURL = "http://rm-rf.run/"
 languageCode = "en-us"
-title = "Hey"
+title = "NotePad"
 theme = "one"
 
 pygmentsCodefences = true

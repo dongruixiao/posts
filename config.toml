@@ -1,6 +1,6 @@
 baseURL = "https://d3adloop.github.io/posts/"
 languageCode = "en-us"
-title = "Hey"
+title = "NotePad"
 theme = "one"
 
 pygmentsCodefences = true
